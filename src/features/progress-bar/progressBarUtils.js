@@ -1,11 +1,5 @@
 export function countValues(items) {
-    let totalValue = 0;
-
-    items.forEach((item) => {
-        totalValue += item.value;
-    })
-
-    return totalValue;
+    return items.reduce((previous, current) => previous + current.value, 0);
 }
 
 export function getPercentOfValue(value1, value2) {
